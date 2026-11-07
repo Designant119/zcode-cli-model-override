@@ -27,9 +27,11 @@ import {
   PermissionService,
   buildPluginReferenceCatalog,
   writeWorkflowDraft,
+  pinInvocationModelSelectionPersistence,
   type AmendWorkflowRunSettingsInput,
   type ResumeSessionResult,
 } from "@zcode/core";
+import { resolveInvocationModelSelection } from "./invocation-model-override.js";
 import { createModelTelemetry } from "@zcode/telemetry";
 import {
   createRootTraceContext,
